@@ -1,0 +1,61 @@
+10.6498 	WARNING 	Trailing spaces were removed from the data file path 'D:\LMU\P4\Experimpent\data/pilot_Raiden_experiment_2026-11-17_00h17.02.657', it will be saved as 'D:\LMU\P4\Experimpent\data\pilot_Raiden_experiment_2026-11-17_00h17.02.657'.
+10.6590 	DEBUG 	Fullscreen settings ignored as running in pilot mode.
+10.6614 	INFO 	Loaded monitor calibration from ['2025_02_15 14:23']
+11.1008 	INFO 	Using renderer 'Intel(R) UHD Graphics' for graphics
+11.1009 	INFO 	OpenGL version supported by driver is 4..
+12.2044 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000025D0516C790>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000025D0515F9D0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000025D05526650>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(560.0), np.float64(240.0)], screen=0, size=array([800, 600]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+12.2045 	EXP 	window1: backgroundImage = ''
+12.2046 	EXP 	window1: backgroundFit = 'none'
+12.2536 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.2748 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.2960 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.3130 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.3276 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.3420 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.3612 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.3817 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.4004 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.4176 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.4333 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.4523 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.4714 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.4921 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.5069 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.5214 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.5354 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.5492 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.5628 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.5772 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.5915 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.5918 	DEBUG 	Uploading Texture Font fontname to graphics card
+12.6014 	DEBUG 	Upload of Texture Font fontname complete
+12.6224 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.6370 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.6514 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+12.6517 	DEBUG 	Uploading Texture Font fontname to graphics card
+12.6674 	DEBUG 	Upload of Texture Font fontname complete
+12.6691 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+12.6692 	EXP 	window1: recordFrameIntervals = False
+12.8732 	EXP 	window1: recordFrameIntervals = True
+14.5430 	EXP 	window1: recordFrameIntervals = False
+14.5430 	EXP 	Screen (0) actual frame rate measured at 59.76Hz
+14.5624 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+14.5784 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+14.5931 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+14.6073 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+14.6209 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+14.6351 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+14.6493 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+14.6625 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+14.6763 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+14.6904 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+14.6908 	DEBUG 	Uploading Texture Font fontname to graphics card
+14.6917 	DEBUG 	Upload of Texture Font fontname complete
+14.7207 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+18.1231 	INFO 	keyboard.Keyboard is using iohub backend.
+18.1232 	EXP 	Raiden_experiment: status = STARTED
+18.1971 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+18.2171 	EXP 	Created instr_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.04), italic=False, languageStyle='LTR', name='instr_text', opacity=1, ori=0.0, pos=array([ 0.,  0., 25.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1.2)
+18.8577 	DEBUG 	Saving data for Raiden_experiment ExperimentHandler
+18.8601 	INFO 	saved data to D:\LMU\P4\Experimpent\data\pilot_Raiden_experiment_2026-11-17_00h17.02.657.psydat
+18.8673 	INFO 	saved data to 'D:\\LMU\\P4\\Experimpent\\data\\pilot_Raiden_experiment_2026-11-17_00h17.02.657.csv'
