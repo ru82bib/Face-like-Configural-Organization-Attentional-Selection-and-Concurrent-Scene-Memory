@@ -48,8 +48,8 @@
         <Param name="mgBlink" val="MIDDLE_BUTTON" valType="list" updates="None" plugin="None"/>
         <Param name="mgSaccade" val="0.5" valType="num" updates="None" plugin="None"/>
         <Param name="keyboardBackend" val="ioHub" valType="str" updates="None" plugin="None"/>
-        <Param name="Audio latency priority" val="3" valType="str" updates="None" plugin="undefined"/>
         <Param name="HTML path" val="" valType="str" updates="None" plugin="undefined"/>
+        <Param name="Audio latency priority" val="3" valType="str" updates="None" plugin="undefined"/>
         <Param name="ecSampleRate" val="default" valType="str" updates="None" plugin="undefined"/>
         <Param name="elAddress" val="100.1.1.1" valType="str" updates="None" plugin="undefined"/>
         <Param name="elDataFiltering" val="FILTER_LEVEL_2" valType="str" updates="None" plugin="undefined"/>
@@ -377,7 +377,7 @@
                 <Param name="color" val="$[1,1,1]" valType="color" updates="constant" plugin="None"/>
                 <Param name="colorSpace" val="rgb" valType="str" updates="constant" plugin="None"/>
                 <Param name="opacity" val="" valType="num" updates="constant" plugin="None"/>
-                <Param name="size" val="0.10, 0.10" valType="list" updates="constant" plugin="None"/>
+                <Param name="size" val="0.15, 0.15" valType="list" updates="constant" plugin="None"/>
                 <Param name="pos" val="0, 0" valType="list" updates="constant" plugin="None"/>
                 <Param name="units" val="from exp settings" valType="str" updates="None" plugin="None"/>
                 <Param name="anchor" val="center" valType="str" updates="constant" plugin="None"/>
@@ -932,6 +932,51 @@
                 <Param name="correctAns" val="" valType="list" updates="constant" plugin="None"/>
             </MouseComponent>
         </Routine>
+        <Routine name="fixation_cross">
+            <RoutineSettingsComponent name="fixation_cross" plugin="None">
+                <Param name="name" val="fixation_cross" valType="code" updates="None" plugin="None"/>
+                <Param name="stopVal" val="" valType="code" updates="constant" plugin="None"/>
+                <Param name="durationEstim" val="" valType="code" updates="None" plugin="None"/>
+                <Param name="stopType" val="duration (s)" valType="str" updates="None" plugin="None"/>
+                <Param name="forceNonSlip" val="False" valType="code" updates="None" plugin="None"/>
+                <Param name="skipIf" val="" valType="code" updates="constant" plugin="None"/>
+                <Param name="useWindowParams" val="False" valType="bool" updates="None" plugin="None"/>
+                <Param name="color" val="$[0,0,0]" valType="color" updates="None" plugin="None"/>
+                <Param name="colorSpace" val="rgb" valType="str" updates="None" plugin="None"/>
+                <Param name="backgroundImg" val="" valType="str" updates="None" plugin="None"/>
+                <Param name="backgroundFit" val="none" valType="str" updates="None" plugin="None"/>
+                <Param name="saveStartStop" val="True" valType="bool" updates="None" plugin="None"/>
+                <Param name="disabled" val="False" valType="bool" updates="None" plugin="None"/>
+                <Param name="desc" val="" valType="str" updates="constant" plugin="None"/>
+            </RoutineSettingsComponent>
+            <TextComponent name="fix_cross" plugin="None">
+                <Param name="name" val="fix_cross" valType="code" updates="None" plugin="None"/>
+                <Param name="startVal" val="0" valType="code" updates="None" plugin="None"/>
+                <Param name="startEstim" val="" valType="code" updates="None" plugin="None"/>
+                <Param name="startType" val="time (s)" valType="str" updates="None" plugin="None"/>
+                <Param name="stopVal" val="0.5" valType="code" updates="constant" plugin="None"/>
+                <Param name="durationEstim" val="" valType="code" updates="None" plugin="None"/>
+                <Param name="stopType" val="duration (s)" valType="str" updates="None" plugin="None"/>
+                <Param name="color" val="black" valType="color" updates="constant" plugin="None"/>
+                <Param name="colorSpace" val="rgb" valType="str" updates="constant" plugin="None"/>
+                <Param name="opacity" val="" valType="num" updates="constant" plugin="None"/>
+                <Param name="pos" val="[0,0]" valType="list" updates="constant" plugin="None"/>
+                <Param name="units" val="from exp settings" valType="str" updates="None" plugin="None"/>
+                <Param name="ori" val="0" valType="num" updates="constant" plugin="None"/>
+                <Param name="saveStartStop" val="True" valType="bool" updates="None" plugin="None"/>
+                <Param name="syncScreenRefresh" val="True" valType="bool" updates="None" plugin="None"/>
+                <Param name="disabled" val="False" valType="bool" updates="None" plugin="None"/>
+                <Param name="contrast" val="1" valType="num" updates="constant" plugin="None"/>
+                <Param name="validator" val="" valType="code" updates="None" plugin="None"/>
+                <Param name="text" val="+" valType="str" updates="constant" plugin="None"/>
+                <Param name="font" val="Arial" valType="str" updates="constant" plugin="None"/>
+                <Param name="draggable" val="False" valType="code" updates="constant" plugin="None"/>
+                <Param name="letterHeight" val="0.05" valType="num" updates="constant" plugin="None"/>
+                <Param name="wrapWidth" val="" valType="num" updates="constant" plugin="None"/>
+                <Param name="flip" val="None" valType="str" updates="constant" plugin="None"/>
+                <Param name="languageStyle" val="LTR" valType="str" updates="None" plugin="None"/>
+            </TextComponent>
+        </Routine>
     </Routines>
     <Flow>
         <Routine name="Welcome"/>
@@ -963,7 +1008,7 @@
             <Param name="conditions" val="[]" valType="str" updates="None" plugin="None"/>
             <Param name="endPoints" val="[0,1]" valType="code" updates="None" plugin="None"/>
         </LoopInitiator>
-        <Routine name="practice_fixation"/>
+        <Routine name="fixation_cross"/>
         <Routine name="recognition_trial"/>
         <LoopTerminator name="recognition_loop"/>
         <Routine name="End_practice1"/>
