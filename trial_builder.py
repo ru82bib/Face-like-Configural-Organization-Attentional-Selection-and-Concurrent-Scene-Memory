@@ -19,7 +19,8 @@ What it does (per participant, called once at the start of the experiment)
 * Central stimuli: 96 face-like (face_reference/) and 96 non-face
   (nonface_centered_0_90_180/). Each session gets 24 of each, balanced over
   shape (and over orientation/side for the non-face set).
-* Writes 8 CSV files per participant into OUT_DIR (4 encoding, 4 recognition).
+* Writes 9 CSV files per participant into OUT_DIR (4 encoding, 4 recognition,
+  and one session summary).
 
 Command line test:   python trial_builder.py 7
 """
@@ -40,8 +41,8 @@ OBJECT_EXTS = ('.jpg', '.jpeg', '.png')
 CENTRAL_EXTS = ('.png', '.jpg', '.jpeg')
 
 # --- output ---
-OUT_DIR = 'trial_list'                     # participant subdirectories created inside BASE_DIR
-BLANK_IMAGE = 'default.png'                # shown at opacity 0 on baseline trials
+OUT_DIR = 'trial_lists'                     # participant subdirectories created inside BASE_DIR
+BLANK_IMAGE = 'practice/baseline.png'                # shown at opacity 0 on baseline trials
 
 # --- design ---
 N_SESSIONS = 4
@@ -54,6 +55,7 @@ ODD_SEQUENCE = 'ABBA'                      # odd participant numbers
 EVEN_SEQUENCE = 'BAAB'                     # even participant numbers
 SETTING_TARGET = {'A': 'face', 'B': 'nonface'}      # which central type is the target
 TARGET_LABEL = {'A': 'face-like', 'B': 'non-face'}  # wording used in the instructions
+SESSION_TARGET = {'A': 'face', 'B': 'non-face'}     # wording used in the summary CSV
 KEY_TARGET = 'space'                       # correct response on target trials
 KEY_NONE = 'none'                          # "correct response" = no key press
 
@@ -180,6 +182,10 @@ def build_all(participant, write=True):
         os.makedirs(out_dir, exist_ok=True)
 
     enc_files, rec_files, all_enc, all_rec = [], [], [], []
+    session_summary = [
+        dict(session=s + 1, target=SESSION_TARGET[settings[s]], session_type=settings[s])
+        for s in range(N_SESSIONS)
+    ]
     for s in range(N_SESSIONS):
         setting = settings[s]
         rng = random.Random('%d-%d' % (n, s))
@@ -263,9 +269,17 @@ def build_all(participant, write=True):
         all_enc.append(enc_rows)
         all_rec.append(rec_rows)
 
+    summary_name = _rel(os.path.join(OUT_DIR, pid), 'P%s_session_summary.csv' % pid)
+    if write:
+        with open(os.path.join(BASE_DIR, summary_name), 'w', newline='', encoding='utf-8') as fh:
+            w = csv.DictWriter(fh, fieldnames=['session', 'target', 'session_type'])
+            w.writeheader()
+            w.writerows(session_summary)
+
     _validate(all_enc, all_rec)
     return dict(participant_n=n, sequence=seq, settings=list(settings), group=group,
                 enc_files=enc_files, rec_files=rec_files,
+                summary_file=summary_name,
                 target_labels=[TARGET_LABEL[x] for x in settings],
                 _enc=all_enc, _rec=all_rec)
 
@@ -297,3 +311,4 @@ if __name__ == '__main__':
     print('Participant %s -> %s %s' % (pid, info['sequence'], info['settings']))
     for e, r in zip(info['enc_files'], info['rec_files']):
         print('  ', e, '|', r)
+    print('  ', info['summary_file'])
