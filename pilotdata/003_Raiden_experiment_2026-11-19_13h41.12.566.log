@@ -1,0 +1,25 @@
+22.9781 	INFO 	Loaded monitor calibration from ['2020_07_06 13:45']
+23.3220 	INFO 	Using renderer 'Quadro K2000/PCIe/SSE2' for graphics
+23.3220 	INFO 	OpenGL version supported by driver is 4..
+23.3428 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000247D43E7610>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000247D43E7670>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=True, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000247D44ECA60>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(0.0), np.float64(0.0)], screen=0, size=array([1680, 1050]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+23.3429 	EXP 	window1: backgroundImage = ''
+23.3429 	EXP 	window1: backgroundFit = 'none'
+23.9978 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+23.9979 	EXP 	window1: recordFrameIntervals = False
+24.1778 	EXP 	window1: recordFrameIntervals = True
+24.3613 	EXP 	Screen (0) actual frame rate measured at 60.04Hz
+24.3614 	EXP 	window1: recordFrameIntervals = False
+29.8760 	INFO 	keyboard.Keyboard is using iohub backend.
+29.8761 	INFO 	keyboard.Keyboard is using iohub backend.
+29.8762 	INFO 	keyboard.Keyboard is using iohub backend.
+29.8763 	INFO 	keyboard.Keyboard is using iohub backend.
+29.8764 	INFO 	keyboard.Keyboard is using iohub backend.
+29.8765 	INFO 	keyboard.Keyboard is using iohub backend.
+29.8765 	INFO 	keyboard.Keyboard is using iohub backend.
+29.8766 	INFO 	keyboard.Keyboard is using iohub backend.
+29.8767 	INFO 	keyboard.Keyboard is using iohub backend.
+29.8768 	INFO 	keyboard.Keyboard is using iohub backend.
+29.8768 	EXP 	Raiden_experiment: status = STARTED
+30.0236 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+31.8099 	INFO 	saved data to C:\Users\EEG Lab 0\Desktop\Face-like-Configural-Organization-Attentional-Selection-and-Concurrent-Scene-Memory-main\data\003_Raiden_experiment_2026-11-19_13h41.12.566.psydat
+31.8109 	INFO 	saved data to 'C:\\Users\\EEG Lab 0\\Desktop\\Face-like-Configural-Organization-Attentional-Selection-and-Concurrent-Scene-Memory-main\\data\\003_Raiden_experiment_2026-11-19_13h41.12.566.csv'
