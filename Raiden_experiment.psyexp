@@ -48,8 +48,8 @@
         <Param name="mgBlink" val="MIDDLE_BUTTON" valType="list" updates="None" plugin="None"/>
         <Param name="mgSaccade" val="0.5" valType="num" updates="None" plugin="None"/>
         <Param name="keyboardBackend" val="ioHub" valType="str" updates="None" plugin="None"/>
-        <Param name="HTML path" val="" valType="str" updates="None" plugin="undefined"/>
         <Param name="Audio latency priority" val="3" valType="str" updates="None" plugin="undefined"/>
+        <Param name="HTML path" val="" valType="str" updates="None" plugin="undefined"/>
         <Param name="ecSampleRate" val="default" valType="str" updates="None" plugin="undefined"/>
         <Param name="elAddress" val="100.1.1.1" valType="str" updates="None" plugin="undefined"/>
         <Param name="elDataFiltering" val="FILTER_LEVEL_2" valType="str" updates="None" plugin="undefined"/>

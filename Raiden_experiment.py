@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2026.2.4),
-    on November 19, 2026, at 01:50
+    on November 23, 2026, at 12:39
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -205,7 +205,7 @@ def setupWindow(expInfo=None, win=None):
         # if not given a window to setup, make one
         win = visual.Window(
             size=_winSize, fullscr=_fullScr, screen=0,
-            winType='pyglet', allowGUI=False, allowStencil=True,
+            winType='pyglet', allowGUI=False, allowStencil=False,
             monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
             backgroundImage='', backgroundFit='none',
             blendMode='avg', useFBO=True,
@@ -595,24 +595,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     continue_key1 = keyboard.Keyboard(deviceName='defaultKeyboard', backend='ioHub')
     
     # --- Initialize components for Routine "Instruction" ---
-    textbox = visual.TextBox2(
-         win, text='', placeholder='Type here...', font='Arial',
-         ori=0.0, pos=[0,0], draggable=False,      letterHeight=0.05,
-         size=[0.5,0.5], borderWidth=2.0,
-         color='white', colorSpace='rgb',
-         opacity=None,
-         bold=False, italic=False,
-         lineSpacing=1.0, speechPoint=None,
-         padding=0.0, alignment='center',
-         anchor='center', overflow='visible',
-         fillColor=None, borderColor=None,
-         flipHoriz=False, flipVert=False, 
-         languageStyle='LTR',
-         formattingSyntax='md',
-         editable=False,
-         name='textbox',
-         depth=0, autoLog=True,
-    )
+    inst_text = visual.TextStim(win=win, name='inst_text',
+        text='',
+        font='Arial',
+        pos=[0,0], draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
     intr_key1 = keyboard.Keyboard(deviceName='defaultKeyboard', backend='ioHub')
     
     # --- Initialize components for Routine "fixation_cross2" ---
@@ -2501,13 +2490,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine Instruction
         Instruction = data.Routine(
             name='Instruction',
-            components=[textbox, intr_key1],
+            components=[inst_text, intr_key1],
         )
         Instruction.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
-        textbox.reset()
-        textbox.setText("Block " + str(session) + "/ 4 \n\n In this experiment, you will press 'SPACE' when you see the target. \n\n The target for this block is " + target + " images. \n\n To start the block, please press SPACE.")
+        inst_text.setText("Block " + str(session) + "/ 4 \n\n In this experiment, you will press 'SPACE' when you see the target. \n\n The target for this block is " + target + " images. \n\n To start the block, please press SPACE.")
         # create starting attributes for intr_key1
         intr_key1.keys = []
         intr_key1.rt = []
@@ -2566,23 +2554,23 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             
-            # *textbox* updates
+            # *inst_text* updates
             
-            # if textbox is starting this frame...
-            if textbox.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # if inst_text is starting this frame...
+            if inst_text.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
                 # keep track of start time/frame for later
-                textbox.frameNStart = frameN  # exact frame index
-                textbox.tStart = t  # local t and not account for scr refresh
-                textbox.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(textbox, 'tStartRefresh')  # time at next scr refresh
+                inst_text.frameNStart = frameN  # exact frame index
+                inst_text.tStart = t  # local t and not account for scr refresh
+                inst_text.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(inst_text, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'textbox.started')
+                thisExp.timestampOnFlip(win, 'inst_text.started')
                 # update status
-                textbox.status = STARTED
-                textbox.setAutoDraw(True)
+                inst_text.status = STARTED
+                inst_text.setAutoDraw(True)
             
-            # if textbox is active this frame...
-            if textbox.status == STARTED:
+            # if inst_text is active this frame...
+            if inst_text.status == STARTED:
                 # update params
                 pass
             
